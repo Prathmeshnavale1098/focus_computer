@@ -1,0 +1,2799 @@
+/*=========================================
+        FOCUS COMPUTERS
+==========================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#F5F7FA;
+    color:#333;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+}
+
+/*=========================================
+        HEADER
+==========================================*/
+
+header{
+    width:100%;
+    background:#0F172A;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 15px rgba(0,0,0,.25);
+}
+
+
+/*=========================================
+        WEBSITE NAME
+==========================================*/
+
+/* Website Name */
+
+header h1{
+    color:#F97316;
+    font-size:38px;
+    font-weight:bold;
+    letter-spacing:2px;
+
+}
+
+/*=========================================
+        NAVIGATION
+==========================================*/
+
+nav{
+
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+nav a{
+
+    color:#ffffff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    position:relative;
+    transition:.3s;
+    padding:5px 0;
+}
+
+/* Underline Animation */
+
+nav a::after{
+
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:3px;
+    background:#F97316;
+    transition:.4s;
+    border-radius:5px;
+}
+
+nav a:hover{
+
+    color:#F97316;
+}
+
+nav a:hover::after{
+
+    width:100%;
+}
+
+/* Active Page */
+
+nav a.active{
+
+    color:#F97316;
+}
+
+nav a.active::after{
+
+    width:100%;
+}
+
+/*=========================================
+        HEADINGS
+==========================================*/
+
+h2{
+
+    color:#0F172A;
+    font-size:34px;
+    text-align:center;
+    margin-top:30px;
+}
+
+p{
+
+    color:#555;
+    font-size:18px;
+    line-height:28px;
+    text-align:center;
+}
+
+
+
+
+
+
+
+
+
+/* Part-2 */
+/*=========================================
+        HERO SECTION
+==========================================*/
+
+.hero{
+    width:100%;
+    min-height:500px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(rgba(15,23,42,.75),
+               rgba(15,23,42,.75)),
+               url("../images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-box{
+    width:600px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.30);
+}
+
+.hero-box h2{
+    color:white;
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.hero-box p{
+    color:#E2E8F0;
+    font-size:18px;
+    margin-bottom:30px;
+}
+
+/*=========================================
+        BUTTONS
+==========================================*/
+
+button,
+.btn{
+
+    background:#F97316;
+    color:white;
+    border:none;
+    padding:14px 35px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover,
+.btn:hover{
+
+    background:#EA580C;
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,.20);
+}
+
+/*=========================================
+        CONTENT
+==========================================*/
+
+.content{
+
+    width:90%;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+
+/* Part-3 */
+
+/*=========================================
+        FOOTER
+==========================================*/
+
+footer{
+    background:#0F172A;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+    box-shadow:0 -5px 15px rgba(0,0,0,.20);
+}
+
+footer p{
+    color:white;
+    font-size:16px;
+}
+
+/*=========================================
+        DASHBOARD CARDS
+==========================================*/
+
+.dashboard{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.dashboard-card{
+    background:#ffffff;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.10);
+    transition:all .4s ease;
+    cursor:pointer;
+}
+
+.dashboard-card:hover{
+    background:#F97316;
+    color:#ffffff;
+    transform:translateY(-12px) scale(1.03);
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.dashboard-card:hover h3{
+    color:#ffffff;
+}
+
+.dashboard-card:hover p{
+    color:#ffffff;
+}
+
+.dashboard-card i{
+    font-size:45px;
+    color:#F97316;
+    margin-bottom:15px;
+}
+
+/*=========================================
+        SEARCH BOX
+==========================================*/
+
+.search-box{
+    width:90%;
+    margin:20px auto;
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.search-box input{
+    width:300px;
+}
+
+/*=========================================
+        ALERT BOXES
+==========================================*/
+
+.success{
+    background:#D1FAE5;
+    color:#065F46;
+    padding:15px;
+    border-left:5px solid green;
+    margin:20px;
+    border-radius:8px;
+}
+
+.error{
+    background:#FEE2E2;
+    color:#991B1B;
+    padding:15px;
+    border-left:5px solid red;
+    margin:20px;
+    border-radius:8px;
+}
+
+/*=========================================
+        ANIMATIONS
+==========================================*/
+
+.fade{
+    animation:fade .8s;
+}
+
+@keyframes fade{
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.zoom{
+    transition:.3s;
+}
+
+.zoom:hover{
+    transform:scale(1.05);
+}
+
+/*=========================================
+        SCROLL BAR
+==========================================*/
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ddd}
+
+
+
+
+
+/*=========================================
+        LOGIN PAGE
+==========================================*/
+
+.form-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:70vh;
+    padding:20px;
+}
+
+.card{
+    width:420px;
+    background:#ffffff;
+    padding:40px;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    text-align:center;
+    transition:0.3s ease;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card h2{
+    color:#0F172A;
+    margin-top:auto;
+    margin-bottom:20px;
+    font-size:32px;
+}
+
+.card button{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    background:#F97316;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card button:hover{
+    background:#EA580C;
+    transform:scale(1.03);
+}
+
+.card a{
+    text-decoration:none;
+}
+
+
+
+
+/* login */
+.form-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:75vh;
+}
+
+.card{
+    width:420px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.button-row{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+
+.half-btn{
+    flex:1;
+    background:#F97316;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.half-btn:hover{
+    background:#EA580C;
+}
+
+.card label{
+    display:block;
+    width:100%;
+    text-align:left;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+    color:#333;
+}
+
+.card input[type="email"],
+.card input[type="password"]{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    margin-bottom:12px;
+}
+
+.login-btn{
+    flex:1;
+    background:#F97316;
+    color:#fff;
+    text-decoration:none;
+    text-align:center;
+    padding:12px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+    width:100%;
+    margin-top:10px;
+}
+
+
+
+
+/* Staff Login */
+.card label{
+    display:block;
+    text-align:left;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+    color:#333;
+}
+
+.card input[type="email"],
+.card input[type="password"]{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+.login-btn{
+    width:100%;
+    padding:12px;
+    background:#F97316;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.login-btn:hover{
+    background:#EA580C;
+}
+
+
+
+
+/* Staff Dashboard Header */
+
+.dashboard-header{
+    width:100%;
+    background:#0F172A;
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.dashboard-header h2{
+    color:#fff;
+    margin:0;
+    font-size:30px;
+}
+
+.logout-btn{
+    background:#DC3545;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.logout-btn:hover{
+    background:#B02A37;
+}
+
+/* Dashboard Layout */
+
+.dashboard-container{
+    display:flex;
+    min-height:calc(100vh - 132px);
+}
+
+.sidebar{
+    width:250px;
+    background:#0F172A;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    height:auto;
+}
+
+.sidebar h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px 15px;
+    margin-bottom:10px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.sidebar a:hover{
+    background:#F97316;
+}
+
+.main-content{
+    flex:1;
+    padding:30px;
+}
+
+.table-container{
+    display:flex;
+    justify-content:center;
+}
+
+/* Sidebar */
+
+.sidebar{
+    width:250px;
+    background:#384565;
+    padding:20px;
+}
+
+.sidebar h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.sidebar a:hover{
+    background:#F97316;
+    color:white;
+}
+
+/* Dashboard Content */
+
+.dashboard-content{
+    flex:1;
+    padding:40px;
+}
+
+.dashboard-content button{
+    margin:10px;
+}
+
+
+
+
+
+
+/* Staff_View_Student */
+/* Student List */
+
+.page-title{
+    text-align:center;
+    margin:30px 0 20px;
+    color:#0F172A;
+    font-size:34px;
+}
+
+.table-container{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-bottom:30px;
+}
+
+.student-table{
+    width:90%;
+    background:#fff;
+    border-collapse:collapse;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.student-table th{
+    background:#0F172A;
+    color:#fff;
+    padding:16px;
+    font-size:17px;
+}
+
+.student-table td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.student-table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+.student-table tr:hover{
+    background:#fff3e8;
+    transition:.3s;
+}
+
+/* Small Action Buttons */
+
+.update-btn,
+.delete-btn{
+    padding:6px 12px;
+    font-size:13px;
+    border:none;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    margin:2px;
+}
+
+.update-btn{
+    background:#0d6efd;
+    color:#fff;
+}
+
+.update-btn:hover{
+    background:#0b5ed7;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+}
+
+.delete-btn:hover{
+    background:#bb2d3b;
+}
+
+.back-btn{
+    padding:10px 28px;
+    border-radius:8px;
+    align-items: left;
+}
+
+
+
+
+
+/* Staff_add_student */
+.form-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+    padding:30px;
+}
+
+.card{
+    width:450px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.card h2{
+    text-align:center;
+    color:#0F172A;
+    margin-bottom:25px;
+}
+
+.card label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+    color:#333;
+}
+
+.card input[type="text"],
+.card input[type="email"],
+.card input[type="password"]{
+    width:100%;
+    padding:12px;
+    margin-bottom:18px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.login-btn{
+    width:100%;
+    padding:12px;
+    background:#F97316;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.login-btn:hover{
+    background:#EA580C;
+}
+
+/* Keep footer at the bottom */
+
+main{
+    flex:1;
+}
+
+footer{
+    margin-top:auto;
+    width:100%;
+    background:#0F172A;
+    color:white;
+    text-align:center;
+    padding:20px;
+    box-shadow:0 -5px 15px rgba(0,0,0,.20);
+}
+
+footer p{
+    margin:0;
+    color:white;
+}
+
+
+
+/* staff_update_student page */
+.container{
+    width:450px;
+    margin:40px auto;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.container label{
+    display:block;
+    margin-top:15px;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+.container input[type="text"],
+.container input[type="email"]{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.container input[type="submit"]{
+    width:100%;
+    padding:12px;
+    background:#F97316;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.container input[type="submit"]:hover{
+    background:#EA580C;
+}
+
+
+
+
+
+/* CONTACT PAGE */
+
+.contact-container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+    margin:40px 0;
+}
+
+.contact-info,
+.contact-form{
+    background:#fff;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.contact-info h2,
+.contact-form h2{
+    margin-bottom:25px;
+    color:#F97316;
+    text-align:left;
+}
+
+.contact-item{
+    margin-bottom:25px;
+    padding-bottom:15px;
+    border-bottom:1px solid #eee;
+}
+
+.contact-item:last-child{
+    border-bottom:none;
+}
+
+.contact-item h4{
+    color:#0F172A;
+    margin-bottom:8px;
+}
+
+.contact-item p{
+    text-align:left;
+    margin:0;
+    color:#555;
+}
+
+.contact-form label{
+    display:block;
+    margin:15px 0 6px;
+    font-weight:bold;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+.contact-form textarea{
+    resize:vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:#F97316;
+    outline:none;
+    box-shadow:0 0 5px rgba(249,115,22,.3);
+}
+
+.contact-form button{
+    width:100%;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .contact-container{
+        grid-template-columns:1fr;
+    }
+
+}
+
+
+
+
+/* Admin Login CSS */
+
+.admin-login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    background: #F5F7FA;
+}
+
+.admin-login-box{
+    width: 400px;
+    background: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+}
+
+.admin-login-box h2{
+    text-align: center;
+    color: #0F172A;
+    margin-bottom: 25px;
+}
+
+.admin-login-box label{
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #333;
+}
+
+.admin-login-box input[type="email"],
+.admin-login-box input[type="password"]{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.admin-login-btn{
+    width: 100%;
+    padding: 12px;
+    background: #F97316;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-login-btn:hover{
+    background: #EA580C;
+}
+
+
+
+
+/*=========================
+        COURSES
+=========================*/
+
+.course-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.course-card{
+    background:#fff;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    transition:.3s;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+}
+
+.course-card p{
+    flex-grow:1;
+    margin-bottom:15px;
+    line-height:30px;
+}
+
+.course-card h4{
+    margin:15px 0;
+}
+
+.course-card .btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+}
+
+.course-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,.25);
+}
+
+.course-card h3{
+    color:#0F172A;
+    margin-bottom:15px;
+}
+
+.course-card p{
+    text-align:center;
+    color:#555;
+    margin-bottom:15px;
+}
+
+.course-card h4{
+    color:#F97316;
+    font-size:26px;
+    margin-bottom:20px;
+}
+
+.course-card .btn{
+    display:block;
+    width:100%;
+    text-align:center;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+}
+
+.course-card .btn:first-of-type{
+    margin-bottom:15px;
+}
+
+
+
+
+
+/*=========================
+      PAYMENT PAGE
+=========================*/
+
+.card{
+    width:500px;
+    margin:40px auto;
+}
+
+.card input[type="text"],
+.card input[type="email"]{
+    width:100%;
+    padding:12px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.card input[readonly]{
+    background:#f5f5f5;
+    cursor:not-allowed;
+}
+
+.card button{
+    width:100%;
+    padding:14px;
+    background:#F97316;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.card button:hover{
+    background:#EA580C;
+}
+
+.card select{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+
+
+/* Payment Success */
+
+.payment-success-card{
+    width:650px;
+    margin:40px auto;
+    text-align:center;
+}
+
+.success-icon{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.success-message{
+    color:#555;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.payment-details{
+    text-align:left;
+    margin:25px 0;
+}
+
+.payment-details p{
+    text-align:left;
+    font-size:18px;
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+.payment-details strong{
+    color:#0F172A;
+}
+
+
+
+
+
+/* admin dashboard */
+
+.welcome-box{
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,.15);
+    text-align: center;
+    width: 500px;
+    margin: 30px auto;
+}
+
+.welcome-box h3{
+    color: #0F172A;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.welcome-box p{
+    color: #555;
+    font-size: 18px;
+}
+
+
+
+
+/* ===== ABOUT PAGE ===== */
+
+.about-hero{
+    background:linear-gradient(135deg,#0F172A,#F97316);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+    border-radius:20px;
+    margin:30px;
+}
+
+.about-hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.about-hero p{
+    color:#fff;
+    font-size:20px;
+}
+
+.about-section{
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    margin:30px 0;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+}
+
+.about-text p{
+    text-align:left;
+    line-height:30px;
+}
+
+.stats-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin:40px 0;
+}
+
+.stat-box{
+    background:#F97316;
+    color:white;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+    transition:.3s;
+}
+
+.stat-box:hover{
+    transform:translateY(-8px);
+}
+
+.stat-box h2{
+    color:white;
+    margin:0;
+    font-size:36px;
+}
+
+.stat-box p{
+    color:white;
+}
+
+.section-title{
+    margin:40px 0 20px;
+    text-align:center;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.feature-card{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    border-top:5px solid #F97316;
+}
+
+.feature-card p{
+    text-align:center;
+}
+
+.mission-box{
+    margin:50px 0;
+    background:#0F172A;
+    color:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.mission-box h2{
+    color:#F97316;
+}
+
+.mission-box p{
+    color:white;
+}
+
+
+
+
+/*ADMIN VIEW STUDENTS*/
+
+.admin-topbar{
+    width:100%;
+    background:#0F172A;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
+}
+
+.admin-topbar h2{
+    color:#fff;
+    margin:0;
+    font-size:30px;
+}
+
+.admin-exit-btn{
+    background:#DC3545;
+    color:#fff;
+    text-decoration:none;
+    padding:10px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.admin-exit-btn:hover{
+    background:#B02A37;
+}
+
+.admin-layout{
+    display:flex;
+    min-height:calc(100vh - 130px);
+}
+
+.admin-sidepanel{
+    width:250px;
+    background:#384565;
+    padding:20px;
+}
+
+.admin-sidepanel h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.admin-sidepanel a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.admin-sidepanel a:hover{
+    background:#F97316;
+}
+
+.admin-content-area{
+    flex:1;
+    padding:35px;
+}
+
+.student-heading{
+    text-align:center;
+    color:#0F172A;
+    margin-bottom:25px;
+    font-size:34px;
+}
+
+.student-table-box{
+    width:100%;
+    display:flex;
+    justify-content:center;
+}
+
+.student-data-table{
+    width:95%;
+    border-collapse:collapse;
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.student-data-table th{
+    background:#0F172A;
+    color:#fff;
+    padding:16px;
+    font-size:17px;
+}
+
+.student-data-table td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.student-data-table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+.student-data-table tr:hover{
+    background:#fff3e8;
+}
+
+.student-edit-btn{
+    background:#0D6EFD;
+    color:#fff;
+    border:none;
+    padding:7px 14px;
+    border-radius:6px;
+    font-size:13px;
+    cursor:pointer;
+    margin:2px;
+    transition:.3s;
+}
+
+.student-edit-btn:hover{
+    background:#0B5ED7;
+}
+
+.student-remove-btn{
+    background:#DC3545;
+    color:#fff;
+    border:none;
+    padding:7px 14px;
+    border-radius:6px;
+    font-size:13px;
+    cursor:pointer;
+    margin:2px;
+    transition:.3s;
+}
+
+.student-remove-btn:hover{
+    background:#BB2D3B;
+}
+
+.back-button-area{
+    text-align:center;
+    margin-top:25px;
+}
+
+.return-dashboard-btn{
+    background:#F97316;
+    color:#fff;
+    border:none;
+    padding:10px 28px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.return-dashboard-btn:hover{
+    background:#EA580C;
+}
+
+.admin-footer-bar{
+    background:#0F172A;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+    box-shadow:0 -5px 15px rgba(0,0,0,.20);
+}
+
+.admin-footer-bar p{
+    color:#fff;
+    margin:0;
+}
+
+
+
+
+/* HOME PAGE */
+
+.home-banner{
+    background:linear-gradient(90deg,#0F172A,#F97316);
+    color:white;
+    border-radius:20px;
+    padding:90px 50px;
+    margin:30px;
+}
+
+.banner-content{
+    max-width:650px;
+}
+
+.home-banner h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.home-banner p{
+    color:white;
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.secondary-btn{
+    background:white;
+    color:#F97316;
+    margin-left:15px;
+}
+
+.secondary-btn:hover{
+    background:#f1f1f1;
+}
+
+.services{
+    width:90%;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.service-box{
+    background:white;
+    border-left:6px solid #F97316;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.service-box:hover{
+    transform:translateY(-8px);
+}
+
+.service-box h3{
+    margin-bottom:10px;
+    color:#0F172A;
+}
+
+.service-box p{
+    text-align:left;
+}
+
+.quote-section{
+    width:90%;
+    margin:50px auto;
+    background:#FFF7ED;
+    border-left:8px solid #F97316;
+    padding:35px;
+    border-radius:15px;
+}
+
+.quote-section blockquote{
+    font-size:24px;
+    color:#0F172A;
+    font-style:italic;
+    text-align:center;
+}
+
+
+/* Course Banner */
+
+.course-banner{
+    height:320px;
+    background:linear-gradient(rgba(15,23,42,.75),rgba(15,23,42,.75)),
+               url("../images/course-banner.jpg");
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.course-overlay{
+    text-align:center;
+    color:white;
+}
+
+.course-overlay h1{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.course-overlay p{
+    color:#fff;
+    font-size:22px;
+}
+
+/* Details */
+
+.course-details-container{
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:35px;
+}
+
+.course-left{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+}
+
+.course-left h2{
+    text-align:left;
+    margin-bottom:15px;
+    color:#F97316;
+}
+
+.course-left p{
+    text-align:left;
+    line-height:30px;
+}
+
+.course-list{
+    margin-top:20px;
+    padding-left:20px;
+}
+
+.course-list li{
+    margin-bottom:12px;
+    font-size:18px;
+}
+
+.syllabus-box{
+    margin-top:20px;
+}
+
+.syllabus-box p{
+    background:#F8FAFC;
+    padding:15px;
+    border-left:5px solid #F97316;
+    border-radius:8px;
+    margin-bottom:12px;
+}
+
+/* Price Card */
+
+.price-card{
+    background:#0F172A;
+    color:white;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    position:sticky;
+    top:100px;
+}
+
+.price-card h3{
+    font-size:30px;
+    margin-bottom:20px;
+}
+
+.price-card h1{
+    color:#F97316;
+    font-size:50px;
+    margin:20px 0;
+}
+
+.price-card p{
+    color:#fff;
+    margin-bottom:12px;
+}
+
+.price-card .btn{
+    display:block;
+    margin-top:25px;
+    text-decoration:none;
+}
+
+/* Back Button */
+
+.back-course{
+    text-align:center;
+    margin:40px 0;
+}
+
+.back-course-btn{
+    display:inline-block;
+    background:#F97316;
+    color:#fff;
+    text-decoration:none;
+    padding:12px 30px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.back-course-btn:hover{
+    background:#EA580C;
+    transform:translateY(-3px);
+    box-shadow:0 8px 18px rgba(0,0,0,.2);
+}
+
+/*=========================================
+        ADMIN VIEW STUDENTS
+=========================================*/
+
+.admin-view-topbar{
+    width:100%;
+    background:#0F172A;
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
+}
+
+.admin-view-topbar h2{
+    color:#fff;
+    margin:0;
+    font-size:30px;
+}
+
+.admin-view-layout{
+    display:flex;
+    min-height:calc(100vh - 120px);
+}
+
+.admin-view-sidebar{
+    width:250px;
+    background:#384565;
+    padding:20px;
+}
+
+.admin-view-sidebar h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.admin-view-sidebar a{
+    display:block;
+    color:#fff;
+    text-decoration:none;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.admin-view-sidebar a:hover{
+    background:#F97316;
+    color:#fff;
+}
+
+.admin-view-content{
+    flex:1;
+    padding:35px;
+}
+
+.admin-view-title{
+    text-align:center;
+    color:#0F172A;
+    font-size:34px;
+    margin-bottom:25px;
+}
+
+.admin-view-table-wrap{
+    display:flex;
+    justify-content:center;
+}
+
+.admin-view-table{
+    width:92%;
+    background:#fff;
+    border-collapse:collapse;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.admin-view-table th{
+    background:#0F172A;
+    color:#fff;
+    padding:16px;
+}
+
+.admin-view-table td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.admin-view-table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+.admin-view-table tr:hover{
+    background:#fff3e8;
+}
+
+.admin-update-btn{
+    background:#0d6efd;
+    color:#fff;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-right:5px;
+}
+
+.admin-update-btn:hover{
+    background:#0b5ed7;
+}
+
+.admin-delete-btn{
+    background:#dc3545;
+    color:#fff;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.admin-delete-btn:hover{
+    background:#bb2d3b;
+}
+
+.admin-view-back{
+    text-align:center;
+    margin-top:30px;
+}
+
+.admin-back-btn{
+    background:#F97316;
+    color:#fff;
+    border:none;
+    padding:12px 30px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.admin-back-btn:hover{
+    background:#EA580C;
+}
+
+.admin-view-footer{
+    background:#0F172A;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+}
+
+.admin-view-footer p{
+    color:#fff;
+    margin:0;
+}
+
+
+
+
+
+/*ADMIN ADD STAFF*/
+
+.asf-header{
+    width:100%;
+    background:#0F172A;
+    color:#fff;
+    padding:16px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.asf-header h2{
+    margin:0;
+    color:#fff;
+    font-size:30px;
+}
+
+.asf-layout{
+    display:flex;
+    min-height:calc(100vh - 130px);
+}
+
+.asf-sidebar{
+    width:250px;
+    background:#384565;
+    padding:20px;
+}
+
+.asf-sidebar h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.asf-sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.asf-sidebar a:hover{
+    background:#F97316;
+}
+
+.asf-content{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.asf-form-card{
+    width:430px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.asf-title{
+    text-align:center;
+    color:#0F172A;
+    margin-bottom:25px;
+    font-size:32px;
+}
+
+.asf-label{
+    display:block;
+    font-weight:bold;
+    color:#333;
+    margin-bottom:8px;
+    margin-top:15px;
+}
+
+.asf-input{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.asf-input:focus{
+    border-color:#F97316;
+    box-shadow:0 0 6px rgba(249,115,22,.3);
+}
+
+.asf-submit-btn{
+    width:100%;
+    margin-top:25px;
+    padding:13px;
+    background:#F97316;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.asf-submit-btn:hover{
+    background:#EA580C;
+    transform:translateY(-2px);
+}
+
+.asf-footer{
+    background:#0F172A;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+}
+
+.asf-footer p{
+    margin:0;
+    color:#fff;
+}
+
+
+
+
+/*VIEW STAFF PAGE*/
+
+.vsf-header{
+    width:100%;
+    background:#0F172A;
+    color:#ffffff;
+    padding:15px 30px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
+}
+
+.vsf-header h2{
+    color:#ffffff;
+    margin:0;
+    font-size:30px;
+}
+
+.vsf-layout{
+    display:flex;
+    min-height:calc(100vh - 130px);
+}
+
+/* Sidebar */
+
+.vsf-sidebar{
+    width:250px;
+    background:#384565;
+    padding:20px;
+}
+
+.vsf-sidebar h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.vsf-sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#ffffff;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.vsf-sidebar a:hover{
+    background:#F97316;
+    color:#ffffff;
+}
+
+/* Main Content */
+
+.vsf-content{
+    flex:1;
+    padding:35px;
+}
+
+.vsf-title{
+    text-align:center;
+    color:#0F172A;
+    font-size:34px;
+    margin-bottom:30px;
+}
+
+/* Table */
+
+.vsf-table-box{
+    display:flex;
+    justify-content:center;
+}
+
+.vsf-table{
+    width:95%;
+    border-collapse:collapse;
+    background:#ffffff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.vsf-table th{
+    background:#0F172A;
+    color:#ffffff;
+    padding:16px;
+    font-size:17px;
+}
+
+.vsf-table td{
+    padding:14px;
+    text-align:center;
+    border-bottom:1px solid #e5e5e5;
+}
+
+.vsf-table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+.vsf-table tr:hover{
+    background:#fff4eb;
+    transition:.3s;
+}
+
+/* Buttons */
+
+.vsf-update-btn{
+    background:#0d6efd;
+    color:#ffffff;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    font-size:14px;
+    cursor:pointer;
+    margin-right:5px;
+    transition:.3s;
+}
+
+.vsf-update-btn:hover{
+    background:#0b5ed7;
+}
+
+.vsf-delete-btn{
+    background:#dc3545;
+    color:#ffffff;
+    border:none;
+    padding:8px 16px;
+    border-radius:6px;
+    font-size:14px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.vsf-delete-btn:hover{
+    background:#bb2d3b;
+}
+
+/* Back Button */
+
+.vsf-back-area{
+    text-align:center;
+    margin-top:30px;
+}
+
+.vsf-back-btn{
+    background:#F97316;
+    color:#ffffff;
+    border:none;
+    padding:12px 35px;
+    border-radius:8px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.vsf-back-btn:hover{
+    background:#EA580C;
+}
+
+/* Footer */
+
+.vsf-footer{
+    background:#0F172A;
+    color:#ffffff;
+    text-align:center;
+    padding:20px;
+    margin-top:auto;
+}
+
+.vsf-footer p{
+    margin:0;
+    color:#ffffff;
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .vsf-layout{
+        flex-direction:column;
+    }
+
+    .vsf-sidebar{
+        width:100%;
+    }
+
+    .vsf-content{
+        padding:20px;
+    }
+
+    .vsf-table{
+        width:100%;
+        font-size:14px;
+    }
+
+    .vsf-update-btn,
+    .vsf-delete-btn{
+        width:100%;
+        margin:3px 0;
+    }
+}
+
+
+
+
+
+/*ADMIN UPDATE STAFF PAGE*/
+
+/* Header */
+.aus-header{
+    width:100%;
+    background:#0F172A;
+    color:#fff;
+    padding:15px 30px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.aus-header h2{
+    color:#fff;
+    margin:0;
+    font-size:30px;
+}
+
+/* Layout */
+.aus-layout{
+    display:flex;
+    min-height:calc(100vh - 80px);
+}
+
+/* Sidebar */
+.aus-sidebar{
+    width:250px;
+    background:#384565;
+    padding:20px;
+}
+
+.aus-sidebar h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.aus-sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#fff;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.aus-sidebar a:hover{
+    background:#F97316;
+    color:#fff;
+}
+
+/* Main Content */
+.aus-content{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    background:#F5F7FA;
+}
+
+/* Form Card */
+.aus-card{
+    width:450px;
+    background:#fff;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.aus-title{
+    text-align:center;
+    color:#0F172A;
+    margin-bottom:25px;
+    font-size:30px;
+}
+
+/* Labels */
+.aus-card label{
+    display:block;
+    font-weight:bold;
+    margin-bottom:6px;
+    margin-top:15px;
+    color:#333;
+}
+
+/* Inputs */
+.aus-card input[type="text"],
+.aus-card input[type="email"],
+.aus-card input[type="password"]{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    margin-bottom:10px;
+    outline:none;
+    transition:.3s;
+    box-sizing:border-box;
+}
+
+.aus-card input:focus{
+    border-color:#F97316;
+    box-shadow:0 0 6px rgba(249,115,22,.3);
+}
+
+/* Button */
+.aus-btn{
+    width:100%;
+    margin-top:20px;
+    background:#F97316;
+    color:#fff;
+    border:none;
+    padding:14px;
+    border-radius:8px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.aus-btn:hover{
+    background:#EA580C;
+}
+
+/* Footer */
+.aus-footer{
+    background:#0F172A;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+}
+
+.aus-footer p{
+    margin:0;
+    color:#fff;
+    font-size:15px;
+}
+
+
+
+
+/*STUDENT DASHBOARD*/
+
+.stud-header{
+    width:100%;
+    background:#0F172A;
+    color:#ffffff;
+    padding:15px 30px;
+    display:flex;
+    align-items:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.20);
+}
+
+.stud-header h2{
+    margin:0;
+    color:#ffffff;
+    font-size:30px;
+    text-align:left;
+}
+
+.stud-layout{
+    display:flex;
+    min-height:calc(100vh - 130px);
+}
+
+/* Sidebar */
+
+.stud-sidebar{
+    width:250px;
+    background:#384565;
+    padding:20px;
+}
+
+.stud-sidebar h3{
+    color:#F97316;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.stud-sidebar a{
+    display:block;
+    text-decoration:none;
+    color:#ffffff;
+    padding:14px;
+    margin-bottom:10px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.stud-sidebar a:hover{
+    background:#F97316;
+}
+
+/* Main Content */
+
+.stud-content{
+    flex:1;
+    background:#F5F7FA;
+    padding:40px;
+}
+
+/* Welcome Box */
+
+.stud-welcome-box{
+    width:500px;
+    margin:40px auto;
+    background:linear-gradient(90deg,#0F172A,#F97316);
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.stud-welcome-box h2{
+    color:white;
+    margin-bottom:15px;
+    font-size:30px;
+}
+
+.stud-welcome-box p{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+/* Footer */
+
+.stud-footer{
+    background:#0F172A;
+    color:#ffffff;
+    text-align:center;
+    padding:20px;
+}
+
+.stud-footer p{
+    margin:0;
+    color:#ffffff;
+}
+
+
+
+
+/*==========================
+    STUDENT PROFILE
+==========================*/
+
+.profile-container{
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+}
+
+.profile-card{
+    background:#ffffff;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    overflow:hidden;
+}
+
+.profile-header{
+    background:linear-gradient(135deg,#0d1b3d,#1d3557);
+    color:#fff;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.profile-avatar{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    background:#ff7a00;
+    color:#fff;
+    font-size:50px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 15px;
+    border:5px solid #fff;
+}
+
+.profile-header h2{
+    font-size:30px;
+    margin-bottom:8px;
+}
+
+.profile-header p{
+    font-size:16px;
+    opacity:0.9;
+}
+
+.profile-body{
+    padding:35px;
+}
+
+.profile-title{
+    color:#ff7a00;
+    font-size:24px;
+    margin-bottom:25px;
+    border-bottom:2px solid #eee;
+    padding-bottom:10px;
+}
+
+.profile-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.profile-table tr{
+    border-bottom:1px solid #ececec;
+}
+
+.profile-table td{
+    padding:16px;
+    font-size:17px;
+}
+
+.profile-table td:first-child{
+    width:35%;
+    font-weight:bold;
+    color:#0d1b3d;
+}
+
+.profile-table td:last-child{
+    color:#555;
+}
+
+.profile-buttons{
+    text-align:center;
+    margin-top:30px;
+}
+
+.profile-btn{
+    display:inline-block;
+    text-decoration:none;
+    background:#ff7a00;
+    color:#fff;
+    padding:12px 28px;
+    border-radius:8px;
+    margin:8px;
+    font-size:16px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.profile-btn:hover{
+    background:#e56700;
+    transform:translateY(-3px);
+}
+
+.logout-btn-profile{
+    background:#d62828;
+}
+
+.logout-btn-profile:hover{
+    background:#b71c1c;
+}
+
+@media(max-width:768px){
+
+.profile-container{
+    margin:20px;
+    padding:10px;
+}
+
+.profile-header{
+    padding:25px 15px;
+}
+
+.profile-avatar{
+    width:90px;
+    height:90px;
+}
+}
+
+
+/* Login Warning Box */
+.alert-box{
+    background:#ffe5e5;
+    color:#d8000c;
+    border:1px solid #ff4d4d;
+    padding:12px;
+    margin-bottom:18px;
+    border-radius:8px;
+    text-align:center;
+    font-weight:bold;
+    animation:fadeIn .4s ease;
+}
+
+@keyframes shake{
+    0%{transform:translateX(0);}
+    20%{transform:translateX(-5px);}
+    40%{transform:translateX(5px);}
+    60%{transform:translateX(-5px);}
+    80%{transform:translateX(5px);}
+    100%{transform:translateX(0);}
+}
+.error-box{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    background:#ffe5e5;
+    color:#c62828;
+    border:1px solid #ef9a9a;
+    border-left:6px solid #e53935;
+    border-radius:8px;
+    padding:10px 15px;
+    margin:15px 0;
+    font-size:16px;
+    font-weight:600;
+    box-sizing:border-box;
+}
+
+.error-box::before{
+    font-size:20px;
+}
+
+
+
+
+
+
+/*STUDENT PROFILE PAGE*/
+
+.spx-profile-container{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:#F5F7FA;
+}
+
+.spx-profile-card{
+    width:650px;
+    background:#ffffff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 12px 30px rgba(0,0,0,.15);
+}
+
+.spx-profile-header{
+    background:#0F172A;
+    color:#ffffff;
+    text-align:center;
+    padding:35px 20px;
+}
+
+.spx-profile-avatar{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:#F97316;
+    color:#ffffff;
+    font-size:40px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:15px;
+}
+
+.spx-profile-header h2{
+    color:#ffffff;
+    margin:10px 0 5px;
+    font-size:30px;
+}
+
+.spx-profile-header p{
+    color:#d6d6d6;
+    font-size:16px;
+}
+
+.spx-profile-body{
+    padding:30px;
+}
+
+.spx-profile-title{
+    text-align:center;
+    color:#0F172A;
+    margin-bottom:25px;
+    font-size:24px;
+}
+
+.spx-profile-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.spx-profile-table td{
+    padding:15px;
+    border-bottom:1px solid #e5e5e5;
+    font-size:17px;
+}
+
+.spx-profile-table td:first-child{
+    font-weight:bold;
+    color:#0F172A;
+    width:40%;
+}
+
+.spx-profile-table tr:nth-child(even){
+    background:#f8f9fa;
+}
+
+.spx-profile-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:30px;
+}
+
+.spx-profile-btn{
+    background:#F97316;
+    color:#ffffff;
+    text-decoration:none;
+    padding:12px 28px;
+    border-radius:8px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.spx-profile-btn:hover{
+    background:#EA580C;
+}
+
+.spx-logout-btn{
+    background:#dc3545;
+}
+
+.spx-logout-btn:hover{
+    background:#bb2d3b;
+}
+
+
+
