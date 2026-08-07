@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="admin-view-topbar">
+
+    <h2>Admin Dashboard</h2>
+
+</div>
+
+<div class="admin-view-layout">
+
+    <!-- Sidebar -->
+    <div class="admin-view-sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/">🏠 Home Dashboard</a>
+        <a href="/admin_dashboard">🏠 Dashboard</a>
+        <a href="/view_students">👨‍🎓 View Students</a>
+        <a href="/admin_add_staff">➕ Add Staff</a>
+        <a href="/view_staff">👨‍🏫 View Staff</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="admin-view-content">
+
+        <h2 class="admin-view-title">Student List</h2>
+
+        <div class="admin-view-table-wrap">
+
+            <table class="admin-view-table">
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+
+                {% for student in students %}
+
+                <tr>
+
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.mobile }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.course }}</td>
+
+                    <td>
+
+                        <a href="/update_student/{{ student.id }}">
+                            <button class="admin-update-btn">Update</button>
+                        </a>
+
+                        <a href="/delete_student/{{ student.id }}"
+                           onclick="return confirm('Delete this student?')">
+                            <button class="admin-delete-btn">Delete</button>
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+        <div class="admin-view-back">
+
+            <a href="/admin_dashboard">
+                <button class="admin-back-btn">Back</button>
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="admin-view-footer">
+
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+
+</footer>
+
+</body>
+</html>

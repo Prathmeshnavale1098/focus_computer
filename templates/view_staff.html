@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Staff</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<div class="vsf-header">
+    <h2>Admin Dashboard</h2>
+</div>
+
+<div class="vsf-layout">
+
+    <!-- Sidebar -->
+    <div class="vsf-sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/">🏠 Home Dashboard</a>
+        <a href="/admin_dashboard">🏠 Dashboard</a>
+        <a href="/view_students">👨‍🎓 View Students</a>
+        <a href="/admin_add_staff">➕ Add Staff</a>
+        <a href="/view_staff">👨‍🏫 View Staff</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="vsf-content">
+
+        <h2 class="vsf-title">Staff List</h2>
+
+        <div class="vsf-table-box">
+
+            <table class="vsf-table">
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+
+                {% for staff in staffs %}
+
+                <tr>
+
+                    <td>{{ staff.id }}</td>
+                    <td>{{ staff.name }}</td>
+                    <td>{{ staff.email }}</td>
+
+                    <td>
+
+                        <a href="/admin_update_staff/{{ staff.id }}">
+                            <button class="vsf-update-btn">Update</button>
+                        </a>
+
+                        <a href="/admin_delete_staff/{{ staff.id }}"
+                           onclick="return confirm('Delete this staff member?')">
+                            <button class="vsf-delete-btn">Delete</button>
+                        </a>
+
+                    </td>
+
+                </tr>
+
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+        <div class="vsf-back-area">
+            <a href="/admin_dashboard">
+                <button class="vsf-back-btn">Back</button>
+            </a>
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="vsf-footer">
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

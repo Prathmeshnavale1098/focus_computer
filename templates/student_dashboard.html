@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<div class="stud-header">
+    <h2>Student Dashboard</h2>
+</div>
+
+<div class="stud-layout">
+
+    <!-- Sidebar -->
+    <div class="stud-sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/student_dashboard">🏠 Dashboard</a>
+        <a href="/student_profile">👤 My Profile</a>
+        <a href="/my_courses">📚 My Courses</a>
+        <a href="/logout">🚪 Logout</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="stud-content">
+
+        <div class="stud-welcome-box">
+
+            <h2>Welcome</h2>
+
+            <p>{{ session['student'] }}</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="stud-footer">
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

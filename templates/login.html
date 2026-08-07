@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+Login - Focus Computers
+{% endblock %}
+
+{% block content %}
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="error">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<br>
+
+<div class="form-container">
+
+    <div class="card">
+
+        <h2>Login As</h2>
+
+<center>
+
+        <a href="/student_login">
+            <button>Student Login</button>
+        </a>
+
+        <br><br>
+
+        <a href="/staff_login">
+            <button>Staff Login</button>
+        </a>
+
+        <br><br>
+
+        <a href="/admin_login">
+            <button>Admin Login</button>
+        </a>
+
+    </center>
+        <!-- <form action="/login" method="POST">
+
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Enter Username" required>
+
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter Password" required>
+
+            <br>
+
+            <button type="submit">Login</button>
+
+            <br><br>
+
+            <p>
+                Don't have an account?
+                <a href="/register">Register Here</a>
+            </p>
+
+        </form> -->
+
+    </div>
+
+</div>
+
+{% endblock %}

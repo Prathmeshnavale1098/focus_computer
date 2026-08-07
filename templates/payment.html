@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}
+Payment - Focus Computers
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+
+    <div class="card">
+
+        <h2>Course Payment</h2>
+
+        <form action="/payment_success" method="POST">
+
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+
+            <label>Email</label>
+            <input type="email" name="email" required>
+
+            <label>Mobile Number</label>
+            <input type="text" name="mobile" required>
+
+            <label>Course</label>
+            <input type="text" name="course" value="{{ course }}" readonly>
+
+            <label>Amount</label>
+            <input type="text" name="amount" value="₹{{ amount }}" readonly>
+
+            <label>Payment Method</label>
+            <select name="payment_method" required>
+                <option value="">Select Payment Method</option>
+                <option>UPI</option>
+                <option>Debit Card</option>
+                <option>Credit Card</option>
+                <option>Net Banking</option>
+            </select>
+
+            <br><br>
+
+            <button type="submit">Pay Now</button>
+
+        </form>
+
+    </div>
+
+</div>
+
+{% endblock %}

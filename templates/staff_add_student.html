@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-header">
+    <h2>Staff Dashboard</h2>
+    <a href="/staff_logout" class="logout-btn">Logout</a>
+</div>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/staff_dashboard">🏠 Dashboard</a>
+        <a href="/staff_view_students">👨‍🎓 View Students</a>
+        <a href="/staff_add_student">➕ Add Student</a>
+        <a href="/staff_logout">🚪 Logout</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <div class="form-container">
+
+            <form method="POST" class="card">
+
+                <h2>Add Student</h2>
+
+                <label>Name</label>
+                <input type="text" name="name" placeholder="Enter Student Name" required>
+
+                <label>Mobile</label>
+                <input type="text" name="mobile" placeholder="Enter Mobile Number" required>
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter Email" required>
+
+                <label>Course</label>
+                <input type="text" name="course" placeholder="Enter Course" required>
+
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Enter Password" required>
+
+                <input type="submit" value="Add Student" class="login-btn">
+
+                <br><br>
+
+                <a href="/staff_dashboard">
+                    <button type="button" class="back-btn">Back</button>
+                </a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

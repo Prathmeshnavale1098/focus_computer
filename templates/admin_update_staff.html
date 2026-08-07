@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Staff</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="aus-header">
+    <h2>Admin Dashboard</h2>
+</div>
+
+<div class="aus-layout">
+
+    <!-- Sidebar -->
+    <div class="aus-sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/admin_dashboard">🏠 Dashboard</a>
+        <a href="/view_students">👨‍🎓 View Students</a>
+        <a href="/admin_add_staff">➕ Add Staff</a>
+        <a href="/view_staff">👨‍🏫 View Staff</a>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="aus-content">
+
+        <div class="aus-card">
+
+            <h2 class="aus-title">Update Staff</h2>
+
+            <form method="POST">
+
+                <label>Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    value="{{ staff.name }}"
+                    required
+                >
+
+                <label>Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    value="{{ staff.email }}"
+                    required
+                >
+
+                <label>Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    value="{{ staff.password }}"
+                    required
+                >
+
+                <button class="aus-btn" type="submit">
+                    Update Staff
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer class="aus-footer">
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

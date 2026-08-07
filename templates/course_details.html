@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ course|title }} Course
+{% endblock %}
+
+{% block content %}
+
+<div class="course-banner">
+    <div class="course-overlay">
+        <h1>{{ course|title }}</h1>
+        <p>Become job-ready with practical training and live projects.</p>
+    </div>
+</div>
+
+<div class="course-details-container">
+
+    <div class="course-left">
+
+        <h2>About this Course</h2>
+
+        <p>
+            This course is specially designed for beginners and students who
+            want to build practical programming skills. You will learn through
+            real examples, assignments and projects.
+        </p>
+
+        <h2>What You'll Learn</h2>
+
+        <ul class="course-list">
+            <li>✔ Fundamentals</li>
+            <li>✔ Practical Coding</li>
+            <li>✔ Real Projects</li>
+            <li>✔ Interview Preparation</li>
+            <li>✔ Certificate</li>
+            <li>✔ Placement Guidance</li>
+        </ul>
+
+        <h2>Course Syllabus</h2>
+
+        <div class="syllabus-box">
+            <p>Module 1 - Introduction</p>
+            <p>Module 2 - Basics</p>
+            <p>Module 3 - Intermediate Concepts</p>
+            <p>Module 4 - Advanced Concepts</p>
+            <p>Module 5 - Mini Project</p>
+            <p>Module 6 - Final Project</p>
+        </div>
+
+    </div>
+
+    <div class="course-right">
+
+        <div class="price-card">
+
+            <h3>{{ course|title }}</h3>
+
+            <h1>₹4,999</h1>
+
+            <p>Duration : 3 Months</p>
+            <p>Level : Beginner to Advanced</p>
+            <p>Mode : Offline / Online</p>
+
+            <a href="/buy/{{ course }}" class="btn">
+                Enroll Now
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+ <div class="back-course">
+    <a href="/courses" class="back-course-btn">← Back to Courses</a>
+</div>
+{% endblock %}

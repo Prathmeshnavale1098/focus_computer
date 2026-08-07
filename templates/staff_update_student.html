@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Student</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-header">
+    <h2>Staff Dashboard</h2>
+    <a href="/staff_logout" class="logout-btn">Logout</a>
+</div>
+
+<div class="form-container">
+
+    <form method="POST" class="card">
+
+        <h2>Update Student</h2>
+
+        <label>Name</label>
+        <input type="text" name="name" value="{{ student.name }}" required>
+
+        <label>Mobile</label>
+        <input type="text" name="mobile" value="{{ student.mobile }}" required>
+
+        <label>Email</label>
+        <input type="email" name="email" value="{{ student.email }}" required>
+
+        <label>Course</label>
+        <input type="text" name="course" value="{{ student.course }}" required>
+
+        <input type="submit" value="Update Student" class="login-btn">
+
+        <br><br>
+
+        <a href="/staff_view_students" class="btn">Back</a>
+
+    </form>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

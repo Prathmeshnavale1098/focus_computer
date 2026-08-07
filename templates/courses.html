@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}
+Courses - Focus Computers
+{% endblock %}
+
+{% block content %}
+
+<div class="content">
+
+    <h2>Our Courses</h2>
+
+    <div class="course-grid">
+
+        <div class="course-card">
+            <h3>Python Programming</h3>
+            <p>Learn Python from beginner to advanced with projects.</p>
+            <h4>₹4,999</h4>
+
+            <a href="/course/python" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='Python Programming') }}" class="btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Java Programming</h3>
+            <p>Master Java programming and object-oriented concepts.</p>
+            <h4>₹5,499</h4>
+
+            <a href="/course/java" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='Java Programming') }}" class="btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Web Development</h3>
+            <p>HTML, CSS, JavaScript, Flask and responsive websites.</p>
+            <h4>₹6,999</h4>
+
+            <a href="/course/web-development" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='Web Development') }}" class="btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>C Programming</h3>
+            <p>Programming fundamentals using the C language.</p>
+            <h4>₹3,999</h4>
+
+            <a href="/course/c" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='C Programming') }}" class="btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>C++ Programming</h3>
+            <p>Object-oriented programming with C++.</p>
+            <h4>₹4,499</h4>
+
+            <a href="/course/cpp" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='C++ Programming') }}" class="btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>MS Office</h3>
+            <p>Word, Excel, PowerPoint and professional office skills.</p>
+            <h4>₹2,999</h4>
+
+            <a href="/course/ms-office" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='MS Office') }}" class="btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>Tally Prime</h3>
+            <p>Accounting, GST and business management.</p>
+            <h4>₹3,499</h4>
+
+            <a href="/course/tally-prime" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='Tally Prime') }}" class="btn">Enroll Now</a>
+        </div>
+
+        <div class="course-card">
+            <h3>MySQL Database</h3>
+            <p>Database design, SQL queries and practical projects.</p>
+            <h4>₹3,999</h4>
+
+            <a href="/course/mysql" class="btn">View Details</a>
+            <a href="{{ url_for('student_register', course='MySQL Database') }}" class="btn">Enroll Now</a>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

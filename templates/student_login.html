@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <form action="/student_login" method="POST" class="card">
+
+        <h2>Login As</h2>
+
+        <div class="button-row">
+            <a href="/staff_login" class="half-btn">Staff Login</a>
+            <a href="/admin_login" class="half-btn">Admin Login</a>
+        </div>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter Email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Password" required>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert-box">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <input type="submit" value="Login" class="login-btn">
+<!-- 
+        <p>
+            <a href="/student_register"><u>Don't have an account?</u> <br>
+                Register Here</a>
+        </p> -->
+
+    </form>
+
+</div>
+
+{% endblock %}

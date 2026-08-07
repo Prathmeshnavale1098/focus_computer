@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="error">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div class="form-container">
+    <div class="card">
+
+
+    <body>
+
+    <h2 align="center">Student Registration</h2>
+
+    <form action="/student_register" method="POST">
+
+        <label>Name</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Mobile</label><br>
+        <input type="text" name="mobile" required><br><br>
+
+        <label>Email</label><br>
+        <input type="email" name="email" required><br><br>
+
+        <label>Selected Course</label>
+        <input type="text" name="course" value="{{ course }}" readonly>
+
+        <label>Password</label><br>
+        <input type="password" name="password" required><br><br>
+
+        <input type="submit" value="Register" class="login-btn">
+        <br>
+        <!-- <a href="/student_login"><u>Login as Student</u></a> -->
+
+    </form>
+
+    </div>
+</div>
+
+{% endblock %}

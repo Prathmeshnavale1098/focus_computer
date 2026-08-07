@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin - Add Staff</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- Header -->
+<div class="asf-header">
+    <h2>Admin Dashboard</h2>
+</div>
+
+<!-- Layout -->
+<div class="asf-layout">
+
+    <!-- Sidebar -->
+    <div class="asf-sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/">🏠 Home</a>
+        <a href="/admin_dashboard">🏠 Dashboard</a>
+        <a href="/view_students">👨‍🎓 View Students</a>
+        <a href="/admin_add_staff">➕ Add Staff</a>
+        <a href="/view_staff">👨‍🏫 View Staff</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="asf-content">
+
+        <div class="asf-form-card">
+
+            <h2 class="asf-title">Add Staff</h2>
+
+            <form action="/admin_add_staff" method="POST">
+
+                <label class="asf-label">Staff Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    class="asf-input"
+                    required
+                >
+
+                <label class="asf-label">Email</label>
+                <input
+                    type="email"
+                    name="email"
+                    class="asf-input"
+                    required
+                >
+
+                <label class="asf-label">Password</label>
+                <input
+                    type="password"
+                    name="password"
+                    class="asf-input"
+                    required
+                >
+
+                <button type="submit" class="asf-submit-btn">
+                    Add Staff
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="asf-footer">
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

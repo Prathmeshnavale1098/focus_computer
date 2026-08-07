@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="form-container">
+
+    <form action="/staff_login" method="POST" class="card">
+
+        <h2>Staff Login</h2>
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter Staff Email" required>
+
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Enter Password" required>
+
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="error-box">
+                    ❌ {{ messages[0] }}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <input type="submit" value="Login" class="login-btn">
+
+    </form>
+
+</div>
+
+{% endblock %}

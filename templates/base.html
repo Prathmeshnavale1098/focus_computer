@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Focus Computers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Focus Computers</h1>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/courses">Courses</a>
+        <a href="/about">About Us</a>
+        <a href="/contactus">Contact Us</a>
+        <a href="/login">Login</a>
+    </nav>
+</header>
+
+{% block content %}
+{% endblock %}
+
+<footer>
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-header">
+    <h2>Staff Dashboard</h2>
+    <a href="/staff_logout" class="logout-btn">Logout</a>
+</div>
+
+<div class="dashboard-container">
+
+    <div class="sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/staff_dashboard">🏠 Dashboard</a>
+
+        <a href="/staff_view_students">👨‍🎓 View Students</a>
+
+        <a href="/staff_add_student">➕ Add Student</a>
+
+        <a href="/staff_logout">🚪 Logout</a>
+
+    </div>
+
+    <div class="dashboard-content">
+
+        <div class="welcome-box">
+            <h3>Welcome To Staff Dashboard</h3>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

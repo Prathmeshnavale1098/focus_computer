@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Students</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-header">
+    <h2>Staff Dashboard</h2>
+    <a href="/staff_logout" class="logout-btn">Logout</a>
+</div>
+
+<div class="dashboard-container">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h3>Menu</h3>
+
+        <a href="/staff_dashboard">🏠 Dashboard</a>
+        <a href="/staff_view_students">👨‍🎓 View Students</a>
+        <a href="/staff_add_student">➕ Add Student</a>
+        <a href="/staff_logout">🚪 Logout</a>
+
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <h2 class="page-title">Student List</h2>
+
+        <div class="table-container">
+
+            <table class="student-table">
+
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+
+                {% for student in students %}
+                <tr>
+
+                    <td>{{ student.id }}</td>
+                    <td>{{ student.name }}</td>
+                    <td>{{ student.mobile }}</td>
+                    <td>{{ student.email }}</td>
+                    <td>{{ student.course }}</td>
+
+                    <td>
+
+                        <a href="/staff_update_student/{{ student.id }}">
+                            <button class="update-btn">Update</button>
+                        </a>
+
+                        <a href="/staff_delete_student/{{ student.id }}"
+                           onclick="return confirm('Delete this student?')">
+                            <button class="delete-btn">Delete</button>
+                        </a>
+
+                    </td>
+
+                </tr>
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+        <br>
+
+        <center>
+            <a href="/staff_dashboard">
+                <button class="back-btn">Back</button>
+            </a>
+        </center>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Focus Computers. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
