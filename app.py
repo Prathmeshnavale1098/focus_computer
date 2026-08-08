@@ -6,6 +6,11 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 app.secret_key = "focus123"
 
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'rushikeshkale509@gmail.com'
+app.config['MAIL_PASSWORD'] = 'dqqx kvhq dauk dcsp'
 
 @app.route("/")
 def home():
