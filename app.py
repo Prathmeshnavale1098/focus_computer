@@ -1,7 +1,7 @@
 from flask import Flask, flash, render_template, request, redirect, session, url_for
 from db import get_connection
 from flask_mail import Mail, Message
-
+import os
 
 app = Flask(__name__)
 app.secret_key = "focus123"
