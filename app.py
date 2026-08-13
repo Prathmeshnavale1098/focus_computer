@@ -12,6 +12,8 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'rushikeshkale509@gmail.com'
 app.config['MAIL_PASSWORD'] = 'dqqx kvhq dauk dcsp'
 
+mail = Mail(app)
+
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -633,13 +635,7 @@ def payment_success():
         #send message
 
 
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 587
-app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'rushikeshkale509@gmail.com'
-app.config['MAIL_PASSWORD'] = 'dqqx kvhq dauk dcsp'
 
-mail = Mail(app)
 
 if __name__ == "__main__":
     app.run(debug=True)
