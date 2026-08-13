@@ -9,11 +9,12 @@ app.secret_key = "focus123"
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'rushikeshkale509@gmail.com'
-app.config['MAIL_PASSWORD'] = 'dqqx kvhq dauk dcsp'
+app.config['MAIL_USERNAME'] = os.getenv('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.getenv('MAIL_PASSWORD)
 
   
 mail = Mail(app)
+
 @app.route("/")
 def home():
     return render_template("index.html")
